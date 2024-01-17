@@ -18,14 +18,14 @@ $P_{ij}(s+t) = \sum_{k}P(X_s = k | X_0 = i)P(X_{s+t} = j | X_s = k) = \sum_k P_{
 #### Holding time distribution
 Let $T_i$ denote the holding time in state $i$, $T_i$ has an exponential distribution.
 
-$
+$$
 \begin{aligned}
  P(T_i > s+t | X_0 = i) &= P(T_i > s+t,  T_i > s ｜ X_0 = i) \\ 
  &= P(T_i > s+t ｜ T_i >s , X_0 = i) P(T_i > s | X_0 = i)\\ 
  &= P(T_i > s+t |  X_s = i)P(T_i>s|X_0=i)\\
  &= P(T_i > t | X_0 = i)P(T_i > s| X_0 = i)
 \end{aligned}
-$
+$$
 
 We can find that if we have stayed for s time in state i, then it is independent that we stay for another t time in state i. 
 
@@ -41,25 +41,25 @@ Hence, the transition probability in the embedded chain is $P_{ij} = \frac{q_{ij
 #### Infinitesimal Generator
 Next, we want to find the derivative of $P(t)$. Suppose an interval $[t, t+h]$,
 
-$
+$$
 \begin{aligned}
  lim_{h \rightarrow 0}\frac{P(X_{t+h} = j | X_t = i)}{h} & = lim_{h \rightarrow 0}\frac{P(X_{h} = j | X_0 = i)}{h}  \\ 
  &= lim_{h \rightarrow 0}\frac{P_{ij}(h)}{h} \\
   &= lim_{h \rightarrow 0}\frac{P_{ij}(h) - P_{ij}(0)}{h} \\
   & = P^{'}_{ij}(0) = q_{ij} \\ 
 \end{aligned}
-$
+$$
 
 We set $Q = P^{'}(0)$ and let $Q_{ij} = P^{'}_{ij}(0), i \neq j$. For $i = j, Q_{ii} = q_i$.
 
 Then, we can prove the probability of embedded chain:
-$
+$$
 \begin{aligned}
  lim_{h \rightarrow 0}P(X_{t+h} = j | X_t = i, X_{t+h} \neq i) & = lim_{h \rightarrow 0}P(X_{h} = j | X_0 = i, X_{h} \neq j)  \\ 
  & = lim_{h \rightarrow 0}\frac{P(X_{h} = j, X_0 = i)}{P(X_{h} \neq j,X_0 = i)}  \\ 
   & = \frac{q_{ij}}{q_i}\\ 
 \end{aligned}
-$
+$$
 
 Then we introduce forward and backward equation to compute the derivative. 
 
