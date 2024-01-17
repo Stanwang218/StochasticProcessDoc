@@ -42,13 +42,13 @@ Prove:
 
 Suppose $i = (x_1, x_2, ..., x_m), j = (x_1^{'}, x_2, ..., x_m)$
 
-$
+$$
 \begin{aligned}
 \pi_j T_{ji} &= \pi(x_1^{'}, x_2, ..., x_m) \frac{\pi(x_1, x_2, ..., x_m)}{\int_x \pi(x, x_2, ..., x_m)dx} \\
 &= \pi(x_1, x_2, ..., x_m) \frac{\pi(x_1^{'}, x_2, ..., x_m)}{\int_x \pi(x, x_2, ..., x_m)dx} \\
 &= \pi_i T_{ij} \\
 \end{aligned}
-$
+$$
 
 gibbs.R shows an easy example about bivariate standard  normal distribution. The covariance of $x, y$ is $\rho$. We use gibbs sampling tp get a series of data and use the library MASS to directly sample from the bivariate distribution. The results are the same. 
 
