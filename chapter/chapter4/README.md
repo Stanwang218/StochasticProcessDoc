@@ -1,3 +1,11 @@
+#### extinctionProb.R : 
+To validate the probability of extinction - Find the extinction probability for a branching process with offspring distribution a = (1∕6, 1∕2, 1∕3).
+
+#### 4-26.R
+In a lottery game,three winning numbers are chosen uniformly at randomfrom {1, ... , 100}, sampling without replacement. Lottery tickets cost $1 and allow a player to pick three numbers. If a player matches the three winning numbers they win the jackpot prize of $1,000. For matching exactly two numbers, they win $15. For matching exactly one number they win $3.
+
+#### Branching.R : simulate branching process
+
 Branching process
 
 1. all nonzero states are transients

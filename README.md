@@ -12,23 +12,23 @@ The frist part is about stochastic process and there are eight chapters in total
         <th>Content</th>
     </tr>
     <tr>
-        <td>1</td>
+        <td>&#10004 1</td>
         <td><a href = "https://github.com/Stanwang218/StochasticProcessDoc/tree/main/chapter/chapter1">Introduction and Review</a></td>
     </tr>
     <tr>
-        <td>2</td>
+        <td>&#10004 2</td>
         <td><a href = "https://github.com/Stanwang218/StochasticProcessDoc/tree/main/chapter/chapter2&3">Basic knowledge about markov chain</a></td>
     </tr>
     <tr>
-        <td>3</td>
+        <td>&#10004 3</td>
         <td><a href = "https://github.com/Stanwang218/StochasticProcessDoc/tree/main/chapter/chapter2&3">Long term analysis for markov chain</a></td>
     </tr>
     <tr>
-        <td>4</td>
+        <td>&#10004 4</td>
         <td><a href = "https://github.com/Stanwang218/StochasticProcessDoc/tree/main/chapter/chapter4">Branching process</a></td>
     </tr>
     <tr>
-        <td>5</td>
+        <td text-align:center>&#10004 5</td>
         <td><a href = "https://github.com/Stanwang218/StochasticProcessDoc/tree/main/chapter/chapter5">Markov chain Monto Carlo(MCMC)</a></td>
     </tr>
     <tr>

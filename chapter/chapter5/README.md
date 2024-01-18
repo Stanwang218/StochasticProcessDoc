@@ -1,8 +1,12 @@
+#### decode.R is an application to decode a message using MH algorithm
+
+#### perfectSampling.R is an easy implementation of perfect sampling on a transition matrix. 
+
+#### gibbs.R shows an easy example about bivariate standard  normal distribution. 
+
 This chapter mainly talks about Monto Carlo Markov Chain(MCMC).
 
 When the distribution $\pi$ is intractable, we can construct an ergodic markov chain whose limiting distribution is $\pi$. 
-
-decode.R is a simple application to decode a message
 
 #### MH algorithm
 
@@ -29,7 +33,6 @@ else:
 
 $\pi_iP_{ij} = \pi_i T_{ij} \alpha_{ij} = \pi_i T_{ij} \frac{\pi_j T_{ji}}{\pi_i T_{ij}} = \pi_j T_{ji}  = \pi_j P_{ji}$
 
-decode.R is an application to decode a message using MH algorithm
 
 ####  Gibbs sampling
 Gibbs sampling is a special case of Metropolis Hastings algorithm. In Gibbs sampling, the distribution is an m-dimensional joint density $\pi(x) = \pi(x_1, x_2, ...., x_m)$. Hence, the data form a vector $X_1 = (x_1^1, x_1^2, ..., x_1^m), X_2 = (x_2^1, x_2^2, ..., x_2^m)...$
@@ -50,7 +53,7 @@ $$
 \end{aligned}
 $$
 
-gibbs.R shows an easy example about bivariate standard  normal distribution. The covariance of $x, y$ is $\rho$. We use gibbs sampling to get a series of data and use the library MASS to directly sample from the bivariate distribution. The results are the same. 
+The covariance of $x, y$ is $\rho$. We use gibbs sampling to get a series of data and use the library MASS to directly sample from the bivariate distribution. The results are the same. 
 
 pdf: 
 $$f(x, y) = \frac{1}{2\pi \sqrt{1- \rho^2}}exp(-\frac{x^2 - 2xy\rho + y^2}{2(1-\rho^2)})$$
@@ -84,4 +87,4 @@ Procedure:
 3. Whether all the states coalesced 
 4. if not, go to step 1
 
-perfectSampling.R is an easy implementation of perfect sampling on a transition matrix. 
+
