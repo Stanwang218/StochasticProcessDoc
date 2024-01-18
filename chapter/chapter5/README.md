@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-gibbs.R shows an easy example about bivariate standard  normal distribution. The covariance of $x, y$ is $\rho$. We use gibbs sampling tp get a series of data and use the library MASS to directly sample from the bivariate distribution. The results are the same. 
+gibbs.R shows an easy example about bivariate standard  normal distribution. The covariance of $x, y$ is $\rho$. We use gibbs sampling to get a series of data and use the library MASS to directly sample from the bivariate distribution. The results are the same. 
 
 pdf: 
 $$f(x, y) = \frac{1}{2\pi \sqrt{1- \rho^2}}exp(-\frac{x^2 - 2xy\rho + y^2}{2(1-\rho^2)})$$
@@ -61,5 +61,27 @@ $$f_{Y|X}(y) = \frac{1}{\sqrt{2\pi (1 - \rho^2)}}exp(-\frac{(y - \rho x)^2}{2(1 
 
 
 
-#### Perfect Sampling
-##### Monotonicity
+#### Perfect Sampling(Coupling from the past)
+Motivation: If a chain is in stationary, then the distribution of current state is independent of its intial state. So we want to guarantee the chain $X_0$ is in stationary. 
+
+A function called update function is proposed:
+
+Probability distribution: $p = \{p_1, p_2, ..., p_n\}$
+
+state: $S = \{s_1, s_2, ...., s_n\}$
+
+$U \sim Uniform(0, 1)$
+
+If $U = u$,  $j$ is the smallest value of index, which satisfies $p_1 + p_2 + .... + p_j < u$
+
+Hence, $P(X = s_j) = P(p_1 + p_2 + ... + p_{j - 1}< U < p_1 + p_2 + ... p_j) = p_j$
+
+Then the update function for a markov chain $X_1, X_2, .... $ is $g(x, u)$, which is obtained from a conditional distribution given $X_0 = x$. 
+
+Procedure:
+1. Sample $U$ from uniform distribution
+2. Run the chain from time t starting at every state 
+3. Whether all the states coalesced 
+4. if not, go to step 1
+
+perfectSampling.R is an easy implementation of perfect sampling on a transition matrix. 
